@@ -1,0 +1,216 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .logo-container {
+    width: 70px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/learn-and-earn-main-logo-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50%; /* Space between logo and other nav items */
+    padding: 20px;
+    padding-right: 70px;
+  }
+  
+  .logo-text {
+    margin-left: 48px; /* Space between logo and text */
+    color: rgb(239, 237, 244);
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-top: -12px;
+  }
+  
+  .logo-text:hover{
+    text-decoration: underline;
+    color: blue;
+  }
+  a {
+    color: #fff;
+  }
+  .logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 50%; /* Space between logo and other nav items */
+  }
+  
+  .navbar {
+    background-color: rgb(42, 158, 208);
+    height: 70px;
+    width: 1650px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 14%;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    /* margin-right: 10px; */
+    margin: 0%;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+
+/* General styling for resource links section */
+.resource-links {
+    margin: 50px auto; /* Center content horizontally */
+    padding: 0 40px; /* Adjust padding for better content width */
+    max-width: 1200px; /* Limit the maximum width */
+    line-height: 1.8; /* Improve readability */
+    text-align: left; /* Align text to the left */
+  }
+  
+  .resource-links h2 {
+    font-size: 32px; /* Larger font size for heading */
+    margin-bottom: 10px; /* Increase space below the heading */
+    color: #333; /* Darker color for contrast */
+    text-align: left;  /* left align the heading */
+
+  }
+  
+  .resource-links ul {
+    list-style-type: disc; /* Keep bullets for the list */
+    padding-left: 40px; /* Add left padding for indentation */
+  }
+  
+  .resource-links li {
+    margin-bottom: 16px; /* More spacing between list items */
+    font-size: 19px; /* Increase the font size of list items */
+    color: #444; /* Use a slightly darker text color */
+  }
+  
+  .resource-links a {
+    color: #0056b3; /* Darker blue for better readability */
+    text-decoration: none;
+    font-weight: 600; /* Semi-bold for better emphasis */
+  }
+  
+  .resource-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* For better spacing between elements */
+  .container {
+    padding-top: 40px; /* Adjust top padding so content doesn't overlap with the header */
+    padding-bottom: 40px; /* Give space at the bottom */
+  }
+  
+  /* Ensure the content spans the entire page */
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Override the body to have more space on the page */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Set default font size larger for readability */
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Add global styles for the links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* General style for the popup */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Increase width to 80% */
+    max-width: 800px; /* Set a max-width for larger screens */
+    max-height: 90vh; /* Ensure the popup does not take up more than 90% of the viewport height */
+    overflow-y: auto; /* Allow scrolling for tall content */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .popup-content {
+    position: relative;
+    padding: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .popup h3 {
+    font-size: 22px; /* Slightly smaller for popup headers */
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .popup p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+  }
+  
+  .popup a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .popup a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Overlay for the popup */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  

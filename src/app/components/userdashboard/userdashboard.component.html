@@ -1,0 +1,32 @@
+<div class="container">
+    <!-- Menu Bar -->
+    <div class="nav">
+      <nav class="navbar">
+        <div class="logo-container">
+          <h3 class="logo-text">
+            <a routerLink="/logo" class="text-decoration-none">Learn2Earn</a>
+          </h3>
+        </div>       
+        <ul>
+          <li><a routerLink="/skills">Skills</a></li>
+          <li><a routerLink="/aboutus">About Us</a></li>
+          <li><a routerLink="/resources">Resources</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/register">Register</a></li>
+          <li><a routerLink="/login">Login</a></li>
+        </ul>
+      </nav> 
+    </div>
+    
+    <!-- Remaining Content -->
+    <div class="dashboard-container">
+      <h1>User Dashboard</h1>
+      <div class="component-boxes">
+        <div class="component-box" *ngFor="let component of components">
+          <a [routerLink]="component.route">{{ component.name }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

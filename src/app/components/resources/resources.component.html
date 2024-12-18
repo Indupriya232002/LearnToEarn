@@ -1,0 +1,127 @@
+<div class="container">
+    <!-- Navbar (original, untouched) -->
+    <div class="nav">
+      <nav class="navbar">
+        <div class="logo-container">
+          <h3 class="logo-text">
+            <a routerLink="/logo" class="text-decoration-none">Learn2Earn</a>
+          </h3>
+          </div>       
+        <ul>
+          <li><a routerLink="/skills">Skills</a></li>
+          <li><a routerLink="/aboutus">About Us</a></li>
+          <li><a routerLink="/resources">Resources</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/register">Register</a></li>
+          <li><a routerLink="/login">Login</a></li>
+        </ul>
+      </nav> 
+    </div>
+    
+    <div class="container">
+        <div class="resource-links">
+          <h2>Resource Links</h2>
+          <ul>
+            <li>
+              <a href="#" (click)="openPopup('center'); $event.preventDefault()">National Center for Families Learning</a> advances literacy and education by developing, implementing, and documenting innovative and promising two-generation practices, networks, and learning tools.
+            </li>
+            <li>
+              <a href="#" (click)="openPopup('literacy'); $event.preventDefault()">National Literacy Directory</a>is a database that connects potential students, volunteers, and advocates to literacy services, education programs, and testing centers nationwide.
+            </li>
+            <li>
+              <a href="#" (click)="openPopup('days'); $event.preventDefault()">30 Days of Families Learning Together</a> provides a month's worth of family literacy activities and practices designed to inspire family memories rooted in imagining, playing, and learning together.
+            </li>
+            <li>
+              <a href="#" (click)="openPopup('readers'); $event.preventDefault()">Cultivating Readers</a> This parent-friendly magazine provides effective and easy strategies to promote reading throughout a child's early years.
+            </li>
+            <li>
+              <a href="#" (click)="openPopup('timeMachine'); $event.preventDefault()">Family Time Machine</a> is loaded with inspiring ideas and activities to help families make the most of their time together.
+            </li>
+            <li>
+              <a href="#" (click)="openPopup('toolkit'); $event.preventDefault()">Practitioner Toolkit: Working with Adult English Language Learners</a> This toolkit offers support to adult education and family literacy instructors who are new to serving adult English language learners and their families in rural, urban, and faith- and community-based programs.
+            </li>
+          </ul>
+        </div>
+    </div>
+      
+    <div *ngIf="isPopupVisible" class="popup-overlay">
+        <div class="popup">
+          <div class="popup-content">
+            <span class="close" (click)="closePopup()">&times;</span>
+            
+            <!-- Content for each link -->
+            <div *ngIf="popupId === 'center'">
+              <h3>National Center for Families Learning</h3>
+              <p>
+                The Family Time Machine™ is fueled by a family's imagination! It turns a family’s moments of togetherness into
+                family time by learning, imagining, and playing. From breakfast to bath time to bedtime, families already spend time
+                together throughout the day. The Family Time Machine helps make the most of those moments by inspiring everyone
+                to learn together with fun activities. Go to <a href="http://familytimemachine.com" target="_blank">http://familytimemachine.com</a>.
+              </p>
+              <p>
+                Wonderopolis® is a place where parents and teachers nurture a brighter world for children through discovery,
+                creativity, learning, and imagination, and offers families and teachers a new Wonder of the Day® every day.
+              </p>
+            </div>
+        
+            <div *ngIf="popupId === 'literacy'">
+              <h3>National Literacy Directory</h3>
+              <p>
+                The National Literacy Directory knows firsthand the opportunities you provide and the challenges you face as you work tirelessly to make real and lasting change happen for your students, your families, and your communities.
+              </p>
+              <p>
+                The Directory not only assists potential students and volunteers in locating nearby programs and services.
+              </p>
+            </div>
+        
+            <div *ngIf="popupId === 'days'">
+              <h3>30 Days of Families Learning Together</h3>
+              <p>
+                Families will be spending a lot of time together in the days ahead, which can be an opportunity 
+                rather than a challenge. NCFL’s guide, "30 Days of Families Learning Together," offers a collection
+                of 30 free family literacy activities designed to make the most of this time. Each day, the guide presents 
+                engaging and interactive activities that promote learning and strengthen family bonds. From creative 
+                projects to educational games and thought-provoking discussions, these activities turn everyday moments
+                into valuable learning experiences. By following this guide, families can enrich their time together,
+                foster a love of learning, and create lasting memories.              </p>
+            </div>
+        
+            <div *ngIf="popupId === 'readers'">
+              <h3>Cultivating Readers</h3>
+              <p>
+                Cultivating readers involves creating an environment that nurtures a love for
+                books and reading from an early age. By providing children with access to a variety 
+                of reading materials and modeling enthusiastic reading habits, you lay the foundation 
+                for their lifelong literacy. Reading aloud to children not only enhances their language
+                skills but also fosters a love for stories and imagination. Encouraging independent reading and
+                allowing children to choose their own books can further develop their interest and engagement with reading. 
+                Regular discussions about books and integrating reading into daily activities make the practice a natural and enjoyable part of life.  </p>
+            </div>
+        
+            <div *ngIf="popupId === 'timeMachine'">
+              <h3>Family Time Machine</h3>
+              <p>
+                The Family Time Machine is a dynamic and creative tool designed to transform everyday family moments
+                into opportunities for learning and connection. It encourages families to engage in fun and educational 
+                activities that turn routine interactions—like mealtimes, bedtime, and playtime—into enriching experiences. 
+                By providing a wide array of activities and prompts, the Family Time Machine inspires families to explore new ideas,
+                learn together, and build stronger bonds. Whether it’s through imaginative play, creative projects, or educational games, 
+                the Family Time Machine helps families make the most of their time together, fostering a love of learning and creating lasting memories  </p>
+            </div>
+        
+            <div *ngIf="popupId === 'toolkit'">
+              <h3>Practitioner Toolkit</h3>
+              <p>
+                The Practitioner Toolkit is an essential resource for educators and family literacy instructors working 
+                with adult English language learners. This comprehensive toolkit offers a wealth of practical strategies, 
+                teaching materials, and support resources designed to enhance instruction and improve learning outcomes. 
+                It includes guidance on effective teaching practices, culturally responsive strategies, and tools for assessing
+                and addressing the unique needs of adult learners. By providing valuable insights and practical solutions, 
+                the Practitioner Toolkit empowers educators to create engaging, supportive, and effective learning environments, 
+                helping adult learners achieve their educational and personal goals              </p>
+            </div>
+          </div>
+        </div>
+    </div>      
+    
+</div>

@@ -1,0 +1,192 @@
+<div class="container">
+  <!-- Navbar (original, untouched) -->
+  <div class="nav">
+    <nav class="navbar">
+      <div class="logo-container">
+        <h3 class="logo-text">
+          <a routerLink="/logo" class="text-decoration-none">Learn2Earn</a>
+        </h3>
+      </div>
+      <ul>
+        <li><a routerLink="/skills">Skills</a></li>
+        <li><a routerLink="/aboutus">About Us</a></li>
+        <li><a routerLink="/resources">Resources</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/login">Login</a></li>
+      </ul>
+      <div *ngIf="username" class="username-display">
+        {{ username }} <!-- Display the username here -->
+      </div>
+    </nav>
+  </div>
+  <div class="contact-container" style="background-color: #e0f7fa; height: 263vh; width: 99.8vw; display: flex;">
+    <div class="contact-card"
+      style="background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); padding: 20px; width: 80%; height: auto; max-width: 1200px; margin: auto; text-align: center; padding: 40px; margin-top: 200px;">
+      <h1>Register</h1>
+      <p>This is where you’ll set up a new account to get started with Learn to Earn.</p>
+      <p>All fields are required unless indicated.</p>
+
+      <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" #firstNameField="ngModel"
+            style="background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px;" required />
+          <div *ngIf="firstNameField.invalid && (firstNameField.dirty || firstNameField.touched)" style="color: red;">
+            <div *ngIf="firstNameField.errors?.['required']">First Name is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" #lastNameField="ngModel"
+            style="background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px;" required />
+          <div *ngIf="lastNameField.invalid && (lastNameField.dirty || lastNameField.touched)" style="color: red;">
+            <div *ngIf="lastNameField.errors?.['required']">Last Name is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" [(ngModel)]="email" #emailField="ngModel"
+            style="background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px;" required />
+          <div *ngIf="emailField.invalid && (emailField.dirty || emailField.touched)" style="color: red;">
+            <div *ngIf="emailField.errors?.['required']">Email is required.</div>
+            <div *ngIf="emailField.errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" [(ngModel)]="password" #passwordField="ngModel"
+            style="background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px;" required minlength="6" />
+          <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)" style="color: red;">
+            <div *ngIf="passwordField.errors?.['required']">Password is required.</div>
+            <div *ngIf="passwordField.errors?.['minlength']">Password must be at least 6 characters long.</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="repeatPassword">Repeat Password</label>
+          <input type="password" id="repeatPassword" name="repeatPassword" [(ngModel)]="repeatPassword"
+            #repeatPasswordField="ngModel"
+            style="background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px;" required />
+          <div *ngIf="repeatPasswordField.invalid && (repeatPasswordField.dirty || repeatPasswordField.touched)"
+            style="color: red;">
+            <div *ngIf="repeatPasswordField.errors?.['required']">Repeat Password is required.</div>
+            <div *ngIf="repeatPasswordField.errors?.['passwordMismatch']">Passwords must match.</div>
+          </div>
+        </div>
+
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="role" [(ngModel)]="role" value="student" required />
+            I'm a Student
+          </label>
+          <label>
+            <input type="radio" name="role" [(ngModel)]="role" value="instructor" required />
+            I'm an Instructor
+          </label>
+        </div>
+
+        <div class="terms">
+          By creating your account you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="registerForm.invalid">Submit Form</button>
+      </form>
+      <!-- Success message and additional fields -->
+      <div *ngIf="isSubmitted" style="margin-top: 20px; text-align: center;">
+        <p style="color: green;">Your account has been registered successfully!</p>
+
+        <h2>More About You</h2>
+
+        <div class="additional-fields">
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="gender-radio-group">
+                <label>
+                  <input type="radio" name="gender" [(ngModel)]="gender" value="male" required />
+                </label>
+                <span >Male</span>
+                <label style="margin-left: 20px;">
+                  <input type="radio" name="gender" [(ngModel)]="gender" value="female" required />
+                </label> 
+                <span> Female</span>        
+            </div>
+          </div>
+                                      
+
+          <div class="form-group">
+            <label for="ethnicity">What is your race or ethnicity?</label>
+            <select id="ethnicity" name="ethnicity" [(ngModel)]="ethnicity" required
+              style="width: 100%; padding: 10px; font-size: 18px; background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;">
+              <option value="" disabled selected>Select Your Race/Ethnicity</option>
+              <option value="ethnicity1">Asian</option>
+              <option value="ethnicity2">Native Hawaiian or other pacific Islander</option>
+              <option value="ethnicity3">Black or African or American</option>
+              <option value="ethnicity4">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="age">What is your age?</label>
+            <input type="number" id="age" name="age" [(ngModel)]="age" required
+              style="width: 100%; padding: 10px; font-size: 18px; background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;" />
+          </div>
+
+          <div class="form-group">
+            <label for="income">What is the total yearly income for your household from all sources?</label>
+            <select id="income" name="income" [(ngModel)]="income" required
+              style="width: 100%; padding: 10px; font-size: 18px; background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;">
+              <option value="" disabled selected>Select Yearly Income</option>
+              <option value="income1">Less than 50,000</option>
+              <option value="income2">50,000 to 70,000</option>
+              <option value="income2">70,000 to 1,00,000</option>
+              <option value="income2">1,00,000 to 1,50,000</option>
+              <option value="income2">1,50,000 to 2,00,000</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Is English your first language?</label>
+            <div class="gender-radio-group">
+                <label>
+                    <input type="radio" name="firstLanguage" [(ngModel)]="firstLanguage" value="yes" required />
+                </label>
+                <span>Yes</span>
+                <label style="margin-left: 20px;">
+                    <input type="radio" name="firstLanguage" [(ngModel)]="firstLanguage" value="no" required />
+                </label>
+                <span>No</span>        
+            </div>
+        </div>        
+         
+
+          <div class="form-group">
+            <label for="education">What is the highest level of education you have completed?</label>
+            <select id="education" name="education" [(ngModel)]="education" required
+              style="width: 100%; padding: 10px; font-size: 18px; background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;">
+              <option value="" disabled selected>Select Education Level</option>
+              <option value="education1">10th Standard</option>
+              <option value="education2">Intermediate</option>
+              <option value="education2">B.SC</option>
+              <option value="education2">BTech</option>
+              <option value="education2">MTech</option>
+              <option value="education2">M.Sc</option>
+              <option value="education2">MCA</option>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="children">How many children under 18 years of age live in your household?</label>
+            <input type="number" id="children" name="children" [(ngModel)]="children" required
+              style="width: 100%; padding: 10px; font-size: 18px; background-color: #fff3e0; border: 1px solid #ccc; border-radius: 4px; margin-top: 10px;" />
+          </div> -->
+
+          <button type="button" class="submit-btn" (click)="updateAccount()">Update Account</button>
+        </div>
+      </div>
+
+    </div>
+  </div>

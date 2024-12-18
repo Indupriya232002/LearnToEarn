@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.logo-container {
+  width: 70px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/learn-and-earn-main-logo-removebg-preview.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 50%; /* Space between logo and other nav items */
+  padding: 20px;
+  padding-right: 70px;
+}
+
+.logo-text {
+  margin-left: 48px; /* Space between logo and text */
+  color: rgb(239, 237, 244);
+  font-size: 1.5em; /* Adjust font size as needed */
+  margin-top: -12px;
+}
+
+.logo-text:hover{
+  text-decoration: underline;
+  color: blue;
+}
+a {
+  color: #fff;
+}
+.logo {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 50%; /* Space between logo and other nav items */
+}
+
+.navbar {
+  background-color: rgb(42, 158, 208);
+  height: 70px;
+  width: 1650px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  margin-right: 14%;
+}
+
+.navbar ul li {
+  display: inline;
+  /* margin-right: 10px; */
+  margin: 0%;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* About Us Section */
+.about-us-container {
+  width: 100%;
+  padding: 100px 40px 40px; /* Padding adjusted for space under navbar */
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.about-us-container h1 {
+  font-size: 72px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.about-us-container h2 {
+  font-size: 54px;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 30px;
+}
+
+.about-us-container p {
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Footer Section */
+.footer-section {
+  background-color: rgb(42, 158, 208); /* Sky blue background */
+  height: 70px;
+  width: 100%; /* Ensure full width */
+  padding: 20px; /* Padding to add space around the content */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  color: white; /* White text color */
+  font-family: Arial, sans-serif;
+  display: flex; /* Flexbox layout for content alignment */
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Vertically center content */
+  text-align: left; /* Align text to the left */
+  position: relative;
+}
+
+.footer-left {
+  margin-left: 100px; /* Increase space from the left edge */
+  font-size: 24px; /* Larger font size for left section */
+  color: white; 
+}
+
+.footer-right {
+  font-size: 24px; /* Larger font size for right section */
+  text-align: right;
+  margin-right: 10px; /* Ensure space on the right */
+  color: white; 
+}
+

@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .container
+  {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-container {
+    width: 70px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/learn-and-earn-main-logo-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50%; /* Space between logo and other nav items */
+    padding: 20px;
+    padding-right: 70px;
+  }
+  
+  .logo-text {
+    margin-left: 48px; /* Space between logo and text */
+    color: rgb(239, 237, 244);
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-top: -12px;
+  }
+  
+  .logo-text:hover{
+    text-decoration: underline;
+    color: blue;
+  }
+  a {
+    color: #fff;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 50%; /* Space between logo and other nav items */
+  }
+  
+  .navbar {
+    background-color: rgb(42, 158, 208);
+    height: 70px;
+    width: 1650px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 14%;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    /* margin-right: 10px; */
+    margin: 0%;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+  
+  .contact-card h1 {
+    font-size: 55px; /* Large heading */
+    margin-bottom: 50px; /* Space below the heading */
+  }
+  
+  .contact-card p {
+    font-size: 22px; /* Regular text size */
+    margin-bottom: 25px; /* Space between paragraphs */
+  }
+
+  

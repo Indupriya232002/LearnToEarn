@@ -1,0 +1,118 @@
+ /* .front-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .front-page img {
+    max-width: 100%;
+    max-height: 100%;
+  }  */
+  
+
+  .login {   
+    background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/L2EMainpage2-Photoroom.png');
+    background-size: cover;
+    background-position: center;
+    color: rgb(239, 237, 244);
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-weight: 200px;
+    font-size: large;
+}
+
+
+.logo-container {
+    width: 70px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/learn-and-earn-main-logo-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50%; /* Space between logo and other nav items */
+    padding: 20px;
+    padding-right: 70px;
+}
+
+.logo-text {
+    margin-left: 48px; /* Space between logo and text */
+    color: rgb(239, 237, 244);
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-top: -12px;
+  }
+
+  .logo-text:hover{
+    text-decoration: underline;
+    color: blue;
+  }
+  a {
+    color: #fff;
+  }
+
+.logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 50%; /* Space between logo and other nav items */
+}
+
+.navbar {
+    background-color: rgb(42, 158, 208);
+    height: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 14%;
+}
+
+.navbar ul li {
+    display: inline;
+    /* margin-right: 10px; */
+    margin: 0%;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.welcome-message {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+.welcome-message h1 {
+    font-size: 3em; /* Adjust font size as needed */
+    color: rgb(199, 216, 222);
+    margin-top: 148px;
+    margin-right: 146px;
+}
+
+.to{
+    font-size: 168px;
+    margin-top: -33px;
+    margin-left: 719px;
+}
+

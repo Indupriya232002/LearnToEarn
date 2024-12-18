@@ -1,0 +1,257 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .logo-container {
+    width: 70px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-image: url('C:/Users/EINDUPRI/source/repos/LearnToEarnProj/learn2earn/src/assets/learn-and-earn-main-logo-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 50%; /* Space between logo and other nav items */
+    padding: 20px;
+    padding-right: 70px;
+  }
+  
+  .logo-text {
+    margin-left: 48px; /* Space between logo and text */
+    color: rgb(239, 237, 244);
+    font-size: 1.5em; /* Adjust font size as needed */
+    margin-top: -12px;
+  }
+  
+  .logo-text:hover{
+    text-decoration: underline;
+    color: blue;
+  }
+  a {
+    color: #fff;
+  }
+  .logo {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 50%; /* Space between logo and other nav items */
+  }
+  
+  .navbar {
+    background-color: rgb(42, 158, 208);
+    height: 70px;
+    width: 1650px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    margin-right: 14%;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    /* margin-right: 10px; */
+    margin: 0%;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  .container
+  {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff3e0;
+  }
+  
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .radio-group label {
+    font-size: 18px;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .terms {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .terms a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
+  
+  .additional-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .additional-fields h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .additional-fields .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .additional-fields .form-group label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .update-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .gender-radio-group {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: flex-start; /* Aligns items to the start */
+    margin-bottom: 30px; /* Space below the group */
+  }
+  
+  .gender-radio-group label {
+    margin-right: 11px; /* Space between the radio buttons */
+    font-size: 18px; /* Match the original label font size */
+    display: flex; /* Aligns the input and text inline */
+    align-items: center; /* Vertically center the input with the text */
+  }
+  
+  .gender-radio-group input {
+    margin-right: 20px; /* Space between the radio button and label text */
+  }
+  
+  .radio-group {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: flex-start; /* Aligns items to the start */
+    margin-bottom: 30px; /* Space below the group */
+    align-items: center; /* Vertically center items */
+}
+
+.radio-group label {
+    margin-right: 20px; /* Space between radio buttons */
+    font-size: 18px; /* Match the original label font size */
+    display: flex; /* Aligns the input and text inline */
+    align-items: center; /* Vertically center the input with the text */
+}
+
+.radio-group input {
+    margin-right: 5px; /* Space between the radio button and label text */
+}
+
+.username-display {
+  margin-left: auto; /* Push to the right */
+  color: white; /* Change text color if needed */
+}
+
+
+  
+  
